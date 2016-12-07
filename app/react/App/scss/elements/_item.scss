@@ -205,6 +205,12 @@ $item-padding: 15px;
   margin: 15px 0;
   font-family: monospace;
   font-size: $f-size-sm;
+  max-height: 45px;
+  overflow: hidden;
+
+  .relationship-active & {
+    max-height: 999px;
+  }
 }
 
 .item-metadata {
