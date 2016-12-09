@@ -63,6 +63,44 @@ export class ConnectionsList extends Component {
 
     return (
       <div className="item-group">
+        <div className="sort-by">
+          <div className="Dropdown order-by u-floatRight ">
+            <span className="Dropdown-label">Group by</span>
+            <ul className="Dropdown-list">
+              <li className="Dropdown-option is-active">Connection type</li>
+            </ul>
+            <i className="order-by-arrow fa fa-long-arrow-down"></i>
+          </div>
+        </div>
+        <button className="item-group-header is-expanded">
+          <div className="title">
+            <span className="itemGroup-title">
+              <i className="fa fa-arrows-h"></i> Articulo violado
+            </span>
+            <span className="multiselectItem-results">
+              <span className="multiselectItem-action"><i className="fa fa-caret-down"></i></span>
+            </span>
+          </div>
+        </button>
+        <div className="item">
+          <div className="item-info">
+            <span className="item-name">
+              <span className="item-type item-type-1 item-type--mini">
+                <span className="item-type__name"><i className="fa fa-file-text-o"></i></span>
+              </span>
+              Convención Interamericana DH
+            </span>
+            <div className="item-snippet well">
+              2. El peticionario alega que la referida sentencia viola los artículos 1, 2, 4, 5, 8, 11(2), 17, 24, 25,  26  y  32  de  la  Convención  Americana  sobre  Derechos  Humanos  (en adelante  “la Convención” o “la Convención Americana”), así como los artículos 3, 10 y 15 del Protocolo Adicional  a  la  Convención  Americana  sobre  Derechos  Humanos  en  materia  de  Derechos
+              <a href="#">View document</a>
+              <span className="button-toggle">
+                <i className="fa fa-caret-down"></i>
+              </span>
+            </div>
+            <div className="item-actions"><span>Referenced in <a href="#">page 1</a>, <a href="#">page 4</a></span></div>
+          </div>
+        </div>
+        {/*
         {(() => {
           return references.map((reference, index) => {
             let itemClass = '';
@@ -133,6 +171,7 @@ export class ConnectionsList extends Component {
             );
           });
         })()}
+        */}
       </div>
     );
   }

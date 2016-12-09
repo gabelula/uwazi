@@ -118,6 +118,20 @@ $item-padding: 15px;
 .item-type {
   white-space: nowrap;
   width: calc(100% - 35px);
+  
+  &--mini {
+    display: inline !important;
+    
+    .item-type__name {
+      margin-left: 0;
+      font-size: 12px;
+      height: 18px;
+      line-height: 18px;
+      top: 3px;
+      padding: 0 3px 0 4px;
+      text-align: center;
+    }
+  }
 }
 
 .item-label-group {
@@ -202,14 +216,41 @@ $item-padding: 15px;
 }
 
 .item-snippet {
+  position: relative;
   margin: 15px 0;
   font-family: monospace;
   font-size: $f-size-sm;
   max-height: 45px;
   overflow: hidden;
-
-  .relationship-active & {
-    max-height: 999px;
+  
+  a {
+    font-family: $f-regular;
+    display: block;
+    margin-top: 6px;
+  }
+  
+  &.well {
+    padding: 6px;
+    max-height: 40px;
+    border: 0;
+    
+    .button-toggle {
+      position: absolute;
+      bottom: 3px;
+      right: 3px;
+      width: 18px;
+      height: 18px;
+      line-height: 18px;
+      text-align: center;
+      border: 1px solid $c-grey;
+      background: $c-white;
+      box-shadow: 0 0 10px 10px whitesmoke;
+      border-radius: 50%;
+    }
+    
+    &:hover .button-toggle {
+      border-color: $c-grey-dark;
+    }
   }
 }
 
