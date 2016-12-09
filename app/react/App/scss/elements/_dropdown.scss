@@ -6,6 +6,11 @@
   margin: 0;
   z-index: 1;
 }
+.Dropdown-label {
+  font-size: 12px;
+  margin-right: 7px;
+  color: $c-grey-dark;
+}
 .Dropdown-list {
   display: flex;
   flex-direction: column;

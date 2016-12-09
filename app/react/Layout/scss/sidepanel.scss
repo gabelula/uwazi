@@ -109,16 +109,14 @@ $c-sidebar: $c-white;
       border-color: $c-primary;
     }
 
-    .multiselectItem-results {
-    }
-
-    &.is-expanded .multiselectItem-results {
-    }
-
     .title {
       position: relative;
       line-height: 24px;
     }
+  }
+
+  button.item-group-header:hover .itemGroup-title {
+    text-decoration: underline;
   }
 
   .item-group {

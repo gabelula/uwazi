@@ -477,8 +477,9 @@
   line-height: 18px;
   text-align: center;
   margin: 1px 0 0 6px;
+  background: $c-white;
   border: 1px solid $c-grey;
-  border-radius: 3px;
+  border-radius: 50%;
   &:hover {
     border-color: $c-primary;
     cursor: pointer;
