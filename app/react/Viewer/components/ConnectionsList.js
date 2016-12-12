@@ -75,7 +75,12 @@ export class ConnectionsList extends Component {
         <button className="item-group-header is-expanded">
           <div className="title">
             <span className="itemGroup-title">
-              <i className="fa fa-arrows-h"></i> Articulo violado
+              <span className="item-type item-type-empty item-type--mini">
+                <span className="item-type__name">
+                  <i className="fa fa-arrows-h"></i>
+                </span>
+              </span>
+              <span>Articulo violado</span>
             </span>
             <span className="multiselectItem-results">
               <span className="multiselectItem-action"><i className="fa fa-caret-down"></i></span>
