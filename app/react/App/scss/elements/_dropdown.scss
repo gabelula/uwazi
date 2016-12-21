@@ -16,6 +16,7 @@
 }
 .Dropdown-option {
   display: none;
+  line-height: 1.75em;
   border-bottom: 1px dotted transparent;
   cursor: pointer;
   order: 1;
@@ -37,6 +38,7 @@
   align-items: flex-start;
   padding: 15px 20px;
   margin-top: -15px;
+  margin-right: -20px;
   border-radius: 4px;
   background: $c-white;
   box-shadow: 0px 2px 15px -5px $c-grey-dark;
