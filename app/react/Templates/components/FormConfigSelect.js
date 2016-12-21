@@ -90,24 +90,18 @@ export class FormConfigSelect extends Component {
           </div>
         </div>
 
-        <div className="well-metadata-creator">
-          <div>
-            <div>
-              <FormField model={`template.data.properties[${index}].filter`}>
-                <input id={'filter' + this.props.index} type="checkbox"/>
-              </FormField>
-              &nbsp;
-              <label htmlFor={'filter' + this.props.index} title="This property will be used for filtering the library results.
-              When properties match in equal name and field type with other document types, they will be combined for filtering.">
-                Use as filter
-                &nbsp;
-                <i className="fa fa-question-circle"></i>
-              </label>
-            </div>
-            <div>
-              <FilterSuggestions {...ptoperty} />
-            </div>
-          </div>
+        <div>
+          <FormField model={`template.data.properties[${index}].filter`}>
+            <input id={'filter' + this.props.index} type="checkbox"/>
+          </FormField>
+          &nbsp;
+          <label htmlFor={'filter' + this.props.index} title="This property will be used for filtering the library results.
+          When properties match in equal name and field type with other document types, they will be combined for filtering.">
+            Use as filter
+            &nbsp;
+            <i className="fa fa-question-circle"></i>
+          </label>
+          <FilterSuggestions {...ptoperty} />
         </div>
 
       </div>
