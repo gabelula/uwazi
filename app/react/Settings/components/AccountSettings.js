@@ -64,6 +64,22 @@ export class AccountSettings extends Component {
     return (
       <div className="account-settings">
         <div className="panel panel-default">
+          <div className="panel-heading">{t('System', 'Collection settings')}</div>
+          <div className="panel-body">
+            <form onSubmit="">
+              <div className="form-group">
+                <label htmlFor="collection_name">{t('System', 'Name')}</label>
+                <input onChange="" value="Uwazi" type="text" className="form-control"/>
+              </div>
+              <div className="form-group">
+                <label htmlFor="collection_name">{t('System', 'Home page')}</label>
+                <input onChange="" value="/" type="text" className="form-control"/>
+              </div>
+              <button type="submit" className="btn btn-success">{t('System', 'Update')}</button>
+            </form>
+          </div>
+        </div>
+        <div className="panel panel-default">
           <div className="panel-heading">{t('System', 'Email address')}</div>
           <div className="panel-body">
             <form onSubmit={this.updateEmail.bind(this)}>
