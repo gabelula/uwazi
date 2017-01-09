@@ -1,11 +1,11 @@
 @mixin draggable {
   .list-group-item {
     .fa-reorder {
-      margin: 0 25px 0 0;
-      color: $c-grey;
-    }
-    &:hover .fa-reorder {
-      color: $c-grey-dark;
+      position: absolute;
+      top: 0;
+      left: 10px;
+      padding: 16px 0;
+      margin: 0;
     }
   }
 }

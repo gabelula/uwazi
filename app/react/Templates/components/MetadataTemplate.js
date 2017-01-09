@@ -56,12 +56,35 @@ export class MetadataTemplate extends Component {
 
               {connectDropTarget(
                 <ul className="metadataTemplate-list list-group">
+                  <li className="list-group-item--divider">Default properties</li>
+                  <li className="list-group-item">
+                    <span className="property-name">
+                      <i className="fa fa-font"></i> Title
+                    </span>
+                  </li>
+                  <li className="list-group-item">
+                    <span className="property-name">
+                      <i className="fa fa-calendar"></i> Date added
+                    </span>
+                  </li>
+                  <li className="list-group-item">
+                    <span className="property-name">
+                      <i className="fa fa-flag"></i> Icon / Flag
+                    </span>
+                  </li>
+                  {(() => {
+                    if (this.props.template.properties.length > 0) {
+                      return <li className="list-group-item--divider">Custom properties</li>;
+                    }
+                  })()}
                   {this.props.template.properties.map((config, index) => {
                     return <MetadataProperty {...config} key={config.localID} index={index}/>;
                   })}
                   {(() => {
                     return <div className="no-properties">
-                            <span className="no-properties-wrap"><i className="fa fa-clone"></i>Drag properties here</span>
+                            <span className="no-properties-wrap">
+                              <i className="fa fa-clone"></i>Drag custom properties here
+                            </span>
                            </div>;
                   })()}
                 </ul>
