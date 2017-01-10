@@ -56,37 +56,111 @@ export class MetadataTemplate extends Component {
 
               {connectDropTarget(
                 <ul className="metadataTemplate-list list-group">
-                  <li className="list-group-item--divider">Default properties</li>
                   <li className="list-group-item">
                     <span className="property-name">
                       <i className="fa fa-font"></i> Title
                     </span>
+                    <div className="list-group-item-actions">
+                      <button type="button" className="btn btn-default btn-xs property-edit">
+                        <i className="fa fa-pencil"></i> Edit
+                      </button>
+                      <button type="button" disabled className="btn btn-danger btn-xs property-remove">
+                        <i className="fa fa-trash"></i> Delete
+                      </button>
+                    </div>
+                    <div className="propery-form expand">
+                      <div>
+                        <div className="row">
+                          <div className="col-sm-12">
+                            <div className="input-group">
+                              <span className="input-group-addon">
+                                Label
+                              </span>
+                              <FormField model="">
+                                <input className="form-control" />
+                              </FormField>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-sm-4">
+                            <div className="input-group">
+                              <span className="input-group-addon">
+                                <FormField>
+                                  <input type="checkbox" checked disabled/>
+                                </FormField>
+                              </span>
+                              <label className="form-control">Required</label>
+                            </div>
+                          </div>
+                          <div className="col-sm-8">
+                            <div className="input-group">
+                              <span className="input-group-addon">
+                                <FormField>
+                                  <input type="checkbox"/>
+                                </FormField>
+                              </span>
+                              <label className="form-control"
+                                     title="This will activate an option to display one icon or flag before the title.">
+                                Display title with an icon or flag
+                                &nbsp;
+                                <i className="fa fa-question-circle"></i>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                   <li className="list-group-item">
                     <span className="property-name">
                       <i className="fa fa-calendar"></i> Date added
                     </span>
+                    <div className="list-group-item-actions">
+                      <button type="button" className="btn btn-default btn-xs property-edit">
+                        <i className="fa fa-pencil"></i> Edit
+                      </button>
+                      <button type="button" disabled className="btn btn-danger btn-xs property-remove">
+                        <i className="fa fa-trash"></i> Delete
+                      </button>
+                    </div>
+                    <div className="propery-form expand">
+                      <div>
+                        <div className="row">
+                          <div className="col-sm-12">
+                            <div className="input-group">
+                              <span className="input-group-addon">
+                                Label
+                              </span>
+                              <FormField model="">
+                                <input className="form-control" />
+                              </FormField>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="row">
+                          <div className="col-sm-4">
+                            <div className="input-group">
+                              <span className="input-group-addon">
+                                <FormField>
+                                  <input type="checkbox" checked disabled/>
+                                </FormField>
+                              </span>
+                              <label className="form-control">Required</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </li>
-                  <li className="list-group-item">
-                    <span className="property-name">
-                      <i className="fa fa-flag"></i> Icon / Flag
-                    </span>
-                  </li>
-                  {(() => {
-                    if (this.props.template.properties.length > 0) {
-                      return <li className="list-group-item--divider">Custom properties</li>;
-                    }
-                  })()}
                   {this.props.template.properties.map((config, index) => {
                     return <MetadataProperty {...config} key={config.localID} index={index}/>;
                   })}
-                  {(() => {
-                    return <div className="no-properties">
-                            <span className="no-properties-wrap">
-                              <i className="fa fa-clone"></i>Drag custom properties here
-                            </span>
-                           </div>;
-                  })()}
+                  <div className="no-properties">
+                    <span className="no-properties-wrap">
+                      <i className="fa fa-clone"></i>Drag custom properties here
+                    </span>
+                 </div>
                 </ul>
               )}
 
