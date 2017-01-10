@@ -64,35 +64,40 @@ export class AccountSettings extends Component {
     return (
       <div className="account-settings">
         <div className="panel panel-default">
-          <div className="panel-heading">{t('System', 'Collection settings')}</div>
-          <div className="panel-body">
-            <form onSubmit="">
-              <div className="form-group">
-                <label htmlFor="collection_name">{t('System', 'Name')}</label>
-                <input onChange="" value="Uwazi" type="text" className="form-control"/>
-              </div>
-              <div className="form-group">
-                <label htmlFor="collection_name">{t('System', 'Home page')}</label>
-                <input onChange="" value="/" type="text" className="form-control"/>
-              </div>
-              <button type="submit" className="btn btn-success">{t('System', 'Update')}</button>
-            </form>
+          <div className="panel-heading">
+            <span>{t('System', 'Collection settings')}</span>
+            <button type="submit" className="btn btn-success pull-right"><i className="fa fa-save"></i> {t('System', 'Save')}</button>
           </div>
-        </div>
-        <div className="panel panel-default">
-          <div className="panel-heading">{t('System', 'Email address')}</div>
           <div className="panel-body">
             <form onSubmit={this.updateEmail.bind(this)}>
               <div className="form-group">
+                <label htmlFor="collection_name">{t('System', 'Name')}</label>
+                <input onChange="" value="Uwazi" type="text" className="form-control"/>
+                <p className="form-group-description">The name of your Uwazi collection.</p>
+              </div>
+              <div className="form-group">
+                <label htmlFor="collection_name">{t('System', 'Home page')}</label>
+                <div className="input-group">
+                  <span className="input-group-addon">http://localhost:3000/</span>  
+                  <input onChange="" type="text" className="form-control"/>
+                </div>
+                <p className="form-group-description">Set your Uwazi first page. It will be the library by default.</p>
+              </div>
+              <div className="form-group">
                 <label htmlFor="collection_name">{t('System', 'Email')}</label>
                 <input type="email" onChange={this.emailChange.bind(this)} value={this.state.email} className="form-control"/>
+                <p className="form-group-description">This e-mail will be used for admin purposes and Uwazi support.</p>
               </div>
-              <button type="submit" className="btn btn-success">{t('System', 'Update')}</button>
             </form>
           </div>
         </div>
         <div className="panel panel-default">
-          <div className="panel-heading">{t('System', 'Change password')}</div>
+          <div className="panel-heading">
+            <span>{t('System', 'Change password')}</span>
+            <button type="submit" className="btn btn-success pull-right">
+              <i className="fa fa-save"></i> {t('System', 'Save')}
+            </button>
+          </div>
           <div className="panel-body">
             <form onSubmit={this.updatePassword.bind(this)}>
               <div className={'form-group' + (this.state.passwordError ? ' has-error' : '')}>
@@ -122,14 +127,13 @@ export class AccountSettings extends Component {
                         </div>;
                 }
               })()}
-              <button type="submit" className="btn btn-success">{t('System', 'Update')}</button>
             </form>
           </div>
         </div>
         <div className="panel panel-default">
-          <div className="panel-heading">{t('System', 'Close admin session')}</div>
-          <div className="panel-body">
-            <a href='/logout' className="btn btn-danger"><i className="fa fa-sign-out"></i><span> {t('System', 'Logout')}</span></a>
+          <div className="panel-heading">
+            <span>{t('System', 'Close admin session')}</span>
+            <a href='/logout' className="btn btn-danger pull-right"><i className="fa fa-sign-out"></i><span> {t('System', 'Logout')}</span></a>
           </div>
         </div>
       </div>

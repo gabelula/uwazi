@@ -7,6 +7,24 @@
 	border-bottom-color: $c-grey-light;
   background-color: $c-grey-lighten;
   padding: 16px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  
+  .btn {
+    margin-top: -16px;
+    margin-bottom: -16px;
+  }
+}
+
+.panel-body {
+  .form-group:last-child,
+  .form-group:last-child .form-group-description {
+    margin-bottom: 0;
+  }
 }
 
 .panel > .list-group .list-group-item {

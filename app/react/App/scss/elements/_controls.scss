@@ -19,12 +19,19 @@
 
 .form-group {
   label {
-    font-size: 10px;
+    font-size: $f-size-sm;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: .1em;
     color: $c-grey-dark;
   }
 
+  &-description {
+    margin: 5px 0 30px;
+    color: $c-grey-dark;
+    opacity: .6;
+  }
+  
   .required {
     display: none;
     margin: 5px 0;
@@ -34,6 +41,7 @@
   &.has-error .required {
     display: block;
   }
+  
 }
 
 .input-group {
