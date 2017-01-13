@@ -22,7 +22,7 @@ describe('metadata path', () => {
         done();
       })
       .catch(catchErrors(done));
-    });
+    }, 10000);
   });
 
   describe('Dictionaries tests', () => {
